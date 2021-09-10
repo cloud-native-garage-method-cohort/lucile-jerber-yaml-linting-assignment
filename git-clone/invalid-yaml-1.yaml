@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: linter-pipeline-run-
+spec:
+  pipelineRef:
+    name: linter-pipeline
+  params:
+    - name: source-repo
+  value: https://github.com/upslopeio/lint-markdown-files
+  workspaces:
+    - name: shared-workspace
+      volumeClaimTemplate: 
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
