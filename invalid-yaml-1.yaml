@@ -10,7 +10,7 @@ spec:
     - name: source-repo
   value: https://github.com/upslopeio/lint-markdown-files
   workspaces:
-    - name: shared-workspace
+  - name: shared-workspace
       volumeClaimTemplate:
         spec:
           accessModes:
