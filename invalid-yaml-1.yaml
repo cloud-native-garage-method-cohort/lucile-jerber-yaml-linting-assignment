@@ -11,7 +11,7 @@ spec:
   value: https://github.com/upslopeio/lint-markdown-files
   workspaces:
     - name: shared-workspace
-      volumeClaimTemplate: 
+      volumeClaimTemplate:
         spec:
           accessModes:
             - ReadWriteOnce
